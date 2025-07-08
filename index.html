@@ -958,53 +958,10 @@
     </div>
 </footer>
 
-//popup
-<div class="popup" id="thankYouPopup">
-    <div class="popup-content">
-        <span class="close-popup">&times;</span>
-        <i class="fas fa-check-circle"></i>
-        <h3>Thank You!</h3>
-        <p>Your message has been sent successfully. We'll get back to you soon.</p>
-        <button class="btn" style="background: var(--primary);" id="closePopupBtn">Continue Browsing</button>
-    </div>
-</div>
+
 
 <script>
-    // Form submission handling
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-        e.preventDefault();
 
-        // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const phone = document.getElementById('phone').value;
-        const service = document.getElementById('service').value;
-        const message = document.getElementById('message').value;
-
-        // Create form data object
-        const formData = {
-            name: name,
-            email: email,
-            phone: phone,
-            service: service,
-            message: message
-        };
-
-        // In a real implementation, you would send this data to your server
-        // For this example, we'll just log it and show the popup
-        console.log('Form data:', formData);
-
-        // Show the thank you popup
-        document.getElementById('thankYouPopup').style.display = 'flex';
-
-        // Reset form
-        this.reset();
-    });
-
-    // Close popup functionality
-    document.querySelector('.close-popup').addEventListener('click', function() {
-        document.getElementById('thankYouPopup').style.display = 'none';
-    });
 
     document.getElementById('closePopupBtn').addEventListener('click', function() {
         document.getElementById('thankYouPopup').style.display = 'none';
